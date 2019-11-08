@@ -25,4 +25,4 @@ class User < ApplicationRecord
     def password=(password)
         self.password_digest = BCrypt::Password.new(password)
     end
-end
+end 
