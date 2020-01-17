@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+    nginx:
+      build:
+        context: .
+      image: dshue20/compose
+      ports:
+        - 80:80
