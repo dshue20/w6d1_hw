@@ -1,25 +1,15 @@
-html 
-  head 
-    title= title 
-    style 
-      include ../stylesheets/home.css
-  body 
-    div#everything
-      div.header
-        h1#title= title 
-        div.links
-          a.link(href='/') Home 
-          a.link(href='/guest') Add Guest 
+extends layout.pug
 
-      table 
-        thead 
-          tr 
-            th Full Name 
-            th Email 
-            th Number of Guests 
-        tbody 
-          each guest in guests 
-            tr 
-              td #{guest.fullname}
-              td #{guest.email}
-              td #{guest.numGuests} 
+block content
+  table 
+    thead 
+      tr 
+        th Full Name 
+        th Email 
+        th Number of Guests 
+    tbody 
+      each guest in guests 
+        tr 
+          td #{guest.fullname}
+          td #{guest.email}
+          td #{guest.numGuests} 

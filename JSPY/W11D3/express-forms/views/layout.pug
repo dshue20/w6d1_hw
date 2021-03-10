@@ -1,0 +1,13 @@
+html 
+  head 
+    title= title 
+    style 
+      include ../stylesheets/home.css
+      include ../stylesheets/guest-form.css
+  body 
+    div.header
+      h1#title= title 
+      div.links
+        a.link(href='/') Home 
+        a.link(href='/guest') Add Guest 
+    block content
