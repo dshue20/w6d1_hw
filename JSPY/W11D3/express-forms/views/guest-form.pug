@@ -1,0 +1,20 @@
+html 
+  head 
+    title= title 
+    style 
+      include ../stylesheets/guest-form.css
+  body
+    div#form
+      h2 Add Guest
+      form(method="post" action="/guest")
+        div.input-div
+          label(for="fullname") Full Name: 
+          input.input(type="fullname" id="fullname" name="fullname" placeholder="Your name here...")
+        div.input-div
+          label(for="email") Email: 
+          input.input(type="email" id="email" name="email" placeholder="Your email here...")
+        div.input-div
+          label(for="numGuests") Num Guests: 
+          input.input(type="number" id="numGuests" name="numGuests" placeholder="Insert a number")
+        div.input-div.submit
+          input(type="submit" value="Add Guest")
